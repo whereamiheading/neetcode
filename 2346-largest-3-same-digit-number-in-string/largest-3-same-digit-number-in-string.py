@@ -8,7 +8,6 @@ class Solution(object):
         for left in range(0, len(num)-2):
             if len(set(num[left:left+3])) == 1:
                 max_output = max(num[left:left+3], max_output)
-            left += 1
         return str(max_output)
         
 
