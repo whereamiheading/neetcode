@@ -4,19 +4,16 @@ class Solution(object):
         :type num: str
         :rtype: str
         """
-        max_output = ""
-        for left in range(0, len(num)-2):
-            if len(set(num[left:left+3])) == 1:
-                max_output = max(num[left:left+3], max_output)
-        return str(max_output)
+        largest = ""
+    
+        # Iterate through the string
+        for i in range(len(num) - 2):
+            # Check if three consecutive digits are the same
+            if num[i] == num[i + 1] == num[i + 2]:
+                # Get the current 3-digit substring
+                current = num[i:i + 3]
+                # Update largest if current is greater
+                if current > largest:
+                    largest = current
         
-
-
-
-
-
-
-
-
-
-        return output
+        return largest
