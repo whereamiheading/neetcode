@@ -3,6 +3,7 @@ class Solution(object):
         """
         :type nums: List[int]
         :rtype: int
+        [1,1,1,1] : if 4th 1 is to come in, we have to pair with existing 3 in the room.Hence, count += freq[num]
         """
         freq = {}
         count = 0
