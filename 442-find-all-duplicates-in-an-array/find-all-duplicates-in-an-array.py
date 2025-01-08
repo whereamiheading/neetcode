@@ -6,10 +6,12 @@ class Solution(object):
         """
         if len(nums) < 2: return []
 
-        from collections import Counter
-        nums_dict = Counter(nums)
         output = []
-        for key, value in nums_dict.items():
-            if value > 1: 
-                output.append(key)
+
+        for n in nums:
+            index = abs(n) - 1
+            if nums[index] < 0:
+                output.append(abs(n))
+            else:
+                nums[index] = -nums[index]
         return output
